@@ -139,6 +139,7 @@ body {
 
 .button_ref {
   display: block;
+  text-decoration: none;
 }
 
 .footer {
@@ -288,7 +289,8 @@ h1 {
 }
 
 .long_section_part3 .part_number {
-  border-bottom-color: #ffffff;
+  border-bottom-color: #efefef;
+  color: #0a0e34;
 }
 
 .long_section_part3 .part_text {
@@ -362,12 +364,18 @@ h2 {
   font-size: 16px;
 }
 
-.short_section {
+/* .short_section {
+  position: relative;
+} */
+
+.short_section_img_container {
   position: relative;
 }
 
+
 .short_section_number_box {
   position: absolute;
+  z-index: 1;
   top: calc(48vw + 136px);
   left: calc(2.23vw + 2.86px);
   display: flex;
@@ -669,10 +677,18 @@ h2 {
     padding-top: 5vw;
  }
 
-  .short_section_number_box {
+  .short_section:nth-child(odd) .short_section_number_box {
     width: calc(6.51vw + 25px);
     height: calc(6.51vw + 25px);
-    left: calc(50% - 3.25vw - 12.5px);
+    left: auto;
+    right: calc(-3.25vw - 12.5px);
+    top: 11vw;
+  }
+
+  .short_section:nth-child(even) .short_section_number_box {
+    width: calc(6.51vw + 25px);
+    height: calc(6.51vw + 25px);
+    left: calc(-3.25vw - 12.5px);
     top: 11vw;
   }
 
