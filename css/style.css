@@ -281,16 +281,25 @@ h1 {
   padding-bottom: 55px;
 }
 
-.long_section_part3 {
+ .long_section_part3 {
   box-sizing: border-box;
   background-color: #5e42b0;
   padding-top: 55px;
   padding-bottom: 55px;
 }
 
+.long_section:nth-child(even) .long_section_part3 {
+  background-color: #090c35;
+}
+
+
 .long_section_part3 .part_number {
   border-bottom-color: #efefef;
   color: #0a0e34;
+}
+
+.long_section:nth-child(even) .long_section_part3 .part_number {
+  color: #8765dd;
 }
 
 .long_section_part3 .part_text {
@@ -444,6 +453,10 @@ h2 {
   .log_text {
     fill:#ffffff;
     width: 215px;
+  }
+
+  .long_section {
+    overflow: hidden;
   }
 
   .long_section:nth-child(odd) .img_container {
